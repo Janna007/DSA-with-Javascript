@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Array Traversal</title>
+    <script>
+        let arr=[9,3,78,4,65,0,2]
+
+        // traversal
+        // print all elements in array 
+
+        for(let i=0; i<arr.length ;i++){
+        
+            document.write(arr[i])
+        }
+
+        // access one element from array
+
+        let j=3  //index of element which you want to access
+
+        document.write(arr[j])
+
+        //accessing element using a button
+
+        const getElement=()=>{
+            let index=document.getElementById("index").value
+            if(index <arr.length && typeof (parseInt(index)) == "number" && index >=0) //add some validation
+              {
+                 alert(arr[index])
+                }else{
+                    alert("Enter valid index")
+                }
+        }
+
+    </script>
+  
+
+</head>
+<body>
+    <!-- create a button for accessing elements from array -->
+    <input type="text" id="index" />
+    <button onclick="getElement()" >Get element </button>
+    
+</body>
+</html>
