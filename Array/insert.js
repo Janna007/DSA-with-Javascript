@@ -20,7 +20,7 @@ for(let i = arr.length-1 ; i>=0 ;i--){
 
 console.log(arr)
 
-
+//BONUS*****
 //built in function for insertion in array
 
 let arr2=[6,3,5,2,5,1]

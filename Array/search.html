@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Search Array</title>
+    <script>
+        let arr=[3,2,7,6,1,67,10]
+        let index=undefined
+        const getIndex=()=>{
+             const searchItem=document.getElementById("Search").value
+             for(i=0;i<arr.length;i++){
+                 if(arr[i]==searchItem){
+                   index=i
+                 }
+             }
+
+             if(index==undefined){
+                alert("no element found ")
+             }else{
+                alert(`element found at position ${index}`)
+             }
+
+        }
+    </script>
+</head>
+<body>
+    <input type="text"  id="Search"/>
+    <button onclick="getIndex()">Search</button>
+</body>
+</html>
