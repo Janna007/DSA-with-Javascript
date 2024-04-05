@@ -1,3 +1,5 @@
+//created an another array
+
 let arr=[1,2,3,4,5]
  console.log(arr)
 let arr2=[]
@@ -9,6 +11,13 @@ for(i =0;i <arr.length; i++){
 
 
 console.log(arr2)
+
+
+
+//in-place reversing
+
+
+
 
 
 //BONUS ****
