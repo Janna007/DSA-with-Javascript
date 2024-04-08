@@ -28,3 +28,26 @@
 
 //------------------------------------------------------------------------------------------
  
+
+var maximumDifference = function(nums) {
+    let max=0
+    let i=0;
+    while(i<nums.length){
+    for(let j=i+1 ;j<nums.length;j++){
+        if(nums[i]<nums[j]){
+          let diff=nums[j]-nums[i]
+           if(diff>max){
+            max=diff
+           }
+        }
+    }
+    i++
+    }
+
+    if(max===0){
+        return -1
+    }else{
+        return max;
+    }
+
+};
