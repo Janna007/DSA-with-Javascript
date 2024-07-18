@@ -39,8 +39,8 @@ const goingUpDown=(n)=>{
 
 const printBoth=(n)=>{
     //n*n operations  ==> O(n^2)
-    for(var i=0; i<n; i++){
-        for (var j=0; j<n ;j++){
+    for(var i=0; i<n; i++){ 
+        for (var j=0; j<n ;j++){   
             console.log(i,j)
         }
     }
