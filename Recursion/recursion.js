@@ -60,4 +60,34 @@ function goToLunch(person){
     goToLunch(person+1)
 }
 
-goToLunch(1)
+// goToLunch(1)
+
+
+// loops vs recurion
+
+//products of array elements
+
+function arrayProd(arr){
+    let product=1;
+    for (let i = 0; i < arr.length; i++) {
+        product=product*arr[i]
+         }
+         return product
+}
+
+
+// console.log(arrayProd([1,2,3,4]))
+
+//convert the above function in to a recursive function
+
+function prod(arr){  
+     console.log(arr)
+     if(arr.length<=0){
+        return 1
+     }else{
+       return arr[arr.length-1]*prod(arr.slice(0,arr.length-1))
+     }
+     
+}
+
+console.log(prod([1,2,3,4]))
