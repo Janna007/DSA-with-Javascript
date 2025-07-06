@@ -119,3 +119,50 @@ console.log(w,r) // w- 11 r-10
 let h=10;
 let n=++h;
 console.log(h,n) //h-11 n-11
+
+// QUESTIONS
+
+// // 1.
+let u=11;
+u=u++ + ++u;  // 11+13=24
+console.log(u)
+
+// //2.
+
+let k=11 
+let l=22
+let z=k+l+k++ + l++ + ++k + ++l
+console.log(k,l,z) // 13 24 103
+
+//3.
+
+let d=true; //1
+d++;
+console.log(d) //2
+
+// 4.
+
+let s=11++
+console.log(s)  //error-operator with constant is not possible
+
+// 5.
+
+let f=11;
+let g= --(f++) //--11 
+console.log(g)  //throw error
+
+//MATH FUNCTIONS
+Math.round(10.8)  //11
+Math.ceil(10.3)   //11
+Math.floor(10.7)  //10
+Math.trunc(23.900)  //23     
+Math.pow(2,2)  //2^2 =4
+Math.sqrt(16)  //4
+Math.cbrt(27)  //3
+Math.abs(-29)  //29
+Math.max(10,2,5)  //10
+Math.min(10,2,5)  //2
+Math.random()  //generate a random value between 0 and 1
+
+let v=23.9876
+console.log(v.toFixed(2)) //23.98
