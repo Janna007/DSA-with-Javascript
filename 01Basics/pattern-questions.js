@@ -9,8 +9,6 @@ let prompt = require('prompt-sync')();
 //   ***
 //    *
 
-
-
 //    
 //    *
 //   ***
@@ -20,38 +18,49 @@ let prompt = require('prompt-sync')();
 //    
 
 
-  let n = 4;
+let n = 4;
 
-// Top half of diamond
-for (let i = 1; i <= n; i++) {
-  // Add spaces
-  for (let j = 1; j <= n - i; j++) {
-    process.stdout.write(" ")
+//top of diamond 
+
+for(let i=1;i<=n;i++){
+  //blank spaces
+   for(let j=1;j<((n-i)+1);j++){
+       process.stdout.write(" ")
+   }
+
+  //for starts
+
+  for(let k=1;k<=((i*2)-1);k++){
+    process.stdout.write("*")
   }
 
-  // Add stars
-  for (let k = 1; k <= 2 * i - 1; k++) {
-   process.stdout.write("*")
+  console.log();
+  
+}
+
+//bottom of diamond
+
+for(let i=n-1;i>0;i--){
+    //blank spaces
+   for(let j=1;j<((n-i)+1);j++){
+       process.stdout.write(" ")
+   }
+
+  //for starts
+
+  for(let k=1;k<=((i*2)-1);k++){
+    process.stdout.write("*")
   }
 
   console.log();
 }
 
-// Bottom half of diamond
-for (let i = n - 1; i >= 1; i--) {
-  let line = "";
 
-  // Add spaces
-  for (let j = 1; j <= n - i; j++) {
-    line += " ";
-  }
 
-  // Add stars
-  for (let k = 1; k <= 2 * i - 1; k++) {
-    line += "*";
-  }
 
-  console.log(line);
-}
+
+
+
+
 
 
