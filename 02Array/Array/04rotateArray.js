@@ -6,30 +6,31 @@
 //first approach(using in-built functions)
 //--------------------------------------------------------------------------------------
 
-// let arr=[1,2,3,4,5,6,7]
-// let k=16
+let arr=[1,2,3,4,5,6,7]
+let k=16
 
-// const rotatedArray=(arr,k)=>{
-//     let size=arr.length
+const rotatedArray=(arr,k)=>{
+    let size=arr.length
     
-//     if(k>size){
-//       k=k%size
-//     }
+    if(k>size){
+      k=k%size
+    }
 
-//     let remove=arr.splice(size-k,size)  //O(n)
-//     arr.unshift(...remove)           //O(n)
+    let remove=arr.splice(size-k,size)  //O(n)
+    arr.unshift(...remove)           //O(n)
 
-//     return arr
-// }
+    return arr
+}
 
 
-// console.log(rotatedArray(arr,k))
+console.log(rotatedArray(arr,k))
 
 //Time complexity----O(n)
 
 
 
 //second approach  --not going to use built in methods
+// Reversal Algorithm for Array Rotation
 //----------------------------------------------------------------------
 
 
@@ -73,3 +74,4 @@ rotateArray([1,2,3,4,5,6,7],5)
 
 //Time complexity---o(n)
 //space complexity ----o(1)
+

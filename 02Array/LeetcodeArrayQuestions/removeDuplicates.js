@@ -1,3 +1,4 @@
+//26.https://leetcode.com/problems/remove-duplicates-from-sorted-array/?envType=problem-list-v2&envId=array
 //  Remove Duplicates from Sorted Array  . 
 //  Given an integer array sorted in non-decresing order  remove the duplicate elements in-place
 //  relative order of the elements should be kept the same  and return the number of unique elements
@@ -7,18 +8,18 @@
 //first approach using inbuilt methods
 //--------------------------------------------------------------------
 
-// const removeDuplicate=(arr)=>{
-//     for(let i=0; i<arr.length ;i++){
-//         if(arr[i]===arr[i+1]){
-//             arr.splice(i+1,1)
-//             i--
-//         }
-//     }
-//     return arr
-// }
+const removeDuplicate=(arr)=>{
+    for(let i=0; i<arr.length ;i++){
+        if(arr[i]===arr[i+1]){
+            arr.splice(i+1,1)
+            i--
+        }
+    }
+    return arr
+}
 
-// const uniqueArr=removeDuplicate( [3,5,5,6,6,6,7,8,9,9,9] )
-// console.log(uniqueArr,uniqueArr.length)
+const uniqueArr=removeDuplicate( [3,5,5,6,6,6,7,8,9,9,9] )
+console.log(uniqueArr,uniqueArr.length)
 
 //space complexity ---o(1)
 //Time complexity ---o(n)

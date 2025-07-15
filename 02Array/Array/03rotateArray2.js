@@ -1,3 +1,4 @@
+//BRUTEFORCE APPROACH
 
 // 1.left rotation by 1 element
 //---------------------------------------------------------------
@@ -52,7 +53,6 @@ console.log(rightArr)
 
 // 2. Left and Right rotation by k element
 //---------------------------------------------------------------
-//refer rotateArray.js in Array folder
 
 //a.left rotation by k steps
 
@@ -97,6 +97,99 @@ for(let j=1;j<=k;j++){
       }  
 }
 console.log("k steps to right array",ar)
+
+
+//ANOTHER APPROACH
+
+//left rotation by k steps
+
+let a=[1,2,3,4,5];   //[3,4,5,1,2]
+let steps=6;
+let temp=[];
+
+
+for(let i=0;i<a.length;i++){
+    temp[i]=a[(i+steps)%a.length]
+}
+
+console.log(temp)
+
+
+//right rotation by k steps
+
+let ra=[1,2,3,4,5]   //[4,5,1,2,3]
+let rk=1;
+let tempr=[];
+
+for(let i=0;i<ra.length;i++){
+      tempr[(i+rk)%ra.length]=ra[i]
+}  
+console.log(tempr)
+
+
+//this is also not a effiecient algorithm bcs of the extra space temp array (refer rotateArray.js in Array folder)
+
+
+// Reversal Algorithm for Array Rotation
+
+
+const reverse=(arr,left,right)=>{
+    while(left<right){
+      let temp=arr[left];
+      arr[left]=arr[right];
+      arr[right]=temp
+      left++;
+      right--;
+     }
+}
+
+let arrays=[1,2,3,4,5];
+let step=2;
+
+//left rotation
+
+//reverse upto k 
+reverse(arrays,0,step-1)
+
+//reverse from k to last
+reverse(arrays,step,(arrays.length)-1)
+
+//reverse whole array
+reverse(arrays,0,(arrays.length)-1)
+
+
+console.log(arrays)
+
+// right rotation
+
+//reverse whole array
+reverse(arrays,0,(arrays.length)-1)
+
+//reverse upto k 
+reverse(arrays,0,step-1)
+
+//reverse from k to last
+reverse(arrays,step,(arrays.length)-1)
+
+console.log(arrays)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
