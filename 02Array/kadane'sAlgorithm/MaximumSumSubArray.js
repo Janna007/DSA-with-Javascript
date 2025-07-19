@@ -42,13 +42,15 @@ const maxSubArraySum=(array)=>{
 
 function maxSubArray(nums){
      let sum=0;
-     let max=nums[0];
+     // let max=nums[0];
+     let max=-Infinity
 
      for (let i = 0; i < nums.length; i++) {
-          sum+=nums[i]
+          
+          sum+=nums[i];
 
-          if(sum >max){
-               max=sum
+          if(sum>max){
+               max=sum;
           }
 
           if(sum<0){
@@ -59,7 +61,7 @@ function maxSubArray(nums){
      return max
 }
 
-console.log(maxSubArray([-2,1,-3,4,-1,2,1,-5,4]))
+console.log(maxSubArray([-2,-4]))
 
 //Time complexity ---->O(n)
 //space complexity ----->O(1)
