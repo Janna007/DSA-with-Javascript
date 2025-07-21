@@ -107,6 +107,11 @@ while(i<j){
 }
 console.log(ar)
 
+//BONUS ****
+//built in method -reverse()---
+
+// console.log(arr.reverse())
+
 
 //0001111 Array
 
