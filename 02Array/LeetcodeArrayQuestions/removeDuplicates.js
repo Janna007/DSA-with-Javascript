@@ -8,18 +8,18 @@
 //first approach using inbuilt methods
 //--------------------------------------------------------------------
 
-const removeDuplicate=(arr)=>{
-    for(let i=0; i<arr.length ;i++){
-        if(arr[i]===arr[i+1]){
-            arr.splice(i+1,1)
-            i--
-        }
-    }
-    return arr
-}
+// const removeDuplicate=(arr)=>{
+//     for(let i=0; i<arr.length ;i++){
+//         if(arr[i]===arr[i+1]){
+//             arr.splice(i+1,1)
+//             i--
+//         }
+//     }
+//     return arr
+// }
 
-const uniqueArr=removeDuplicate( [3,5,5,6,6,6,7,8,9,9,9] )
-console.log(uniqueArr,uniqueArr.length)
+// const uniqueArr=removeDuplicate( [3,5,5,6,6,6,7,8,9,9,9] )
+// console.log(uniqueArr,uniqueArr.length)
 
 //space complexity ---o(1)
 //Time complexity ---o(n)
@@ -28,28 +28,45 @@ console.log(uniqueArr,uniqueArr.length)
 //--------------------------------------------------------------
 
 //[3,5,5,6,6,6,7,8,9,9,9]
-const remove=(arr)=>{
-     if(arr.length === 0) return 0
-     let i=0
+// const remove=(arr)=>{
+//      if(arr.length === 0) return 0
+//      let i=0
 
-     for (let j =1; j < arr.length; j++) {
-        if(arr[i] !== arr[j]){
-            i++
-            arr[i]=arr[j]
-        }
+//      for (let j =1; j < arr.length; j++) {
+//         if(arr[i] !== arr[j]){
+//             i++
+//             arr[i]=arr[j]
+//         }
         
-     }
+//      }
 
-     return i+1
-}
+//      return i+1
+// }
 
-console.log(remove([3,5,5,6,6,6,7,8,9,9,9]))
+// console.log(remove([3,5,5,6,6,6,7,8,9,9,9]))
 
 
 //space complexity ---o(1)
 //Time complexity ---o(n)
 
 
+
+let nums=[3,5,5,6,6,6,7,8,9,9,9]  //[3,5,6,5,6,6,7]  //[3,5,6,7,6,7]
+
+let i=0;
+let j=1;
+while(j<nums.length){
+    if(nums[i]!==nums[j]){
+       nums[i+1]=nums[j]
+       i++;
+       j++;
+    }else if(nums[i]===nums[j]){
+       j++;
+    }
+}
+
+
+console.log(nums,i+1)
 
 
 //-------------------------------------------------------------------------
@@ -75,3 +92,6 @@ console.log(remove([3,5,5,6,6,6,7,8,9,9,9]))
 // const uniqueCount = removeDuplicates(nums);
 // console.log(uniqueCount); // Output: 6
 // console.log(nums.slice(0, uniqueCount)); // Output: [1, 2, 3, 4, 5, 6]
+
+
+

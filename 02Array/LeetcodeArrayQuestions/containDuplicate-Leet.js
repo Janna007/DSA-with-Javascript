@@ -18,11 +18,13 @@
 // Output: true
  //---------------------------------------------------------------------------------
 
-//  var containsDuplicate = function(nums) {
-//     return new Set(nums).size !== nums.length
-// };
+ var containsDuplicate = function(nums) {
+    return new Set(nums).size !== nums.length
+};
 
  
+
+//BRUTFORCE APPROACH
 var containsDuplicate = function(nums) {
     let i=0
     while(i<nums.length){

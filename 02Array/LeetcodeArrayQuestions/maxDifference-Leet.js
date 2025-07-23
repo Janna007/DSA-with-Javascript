@@ -51,3 +51,22 @@ var maximumDifference = function(nums) {
     }
 
 };
+
+
+let nums=[9,4,3,2];
+let max=-1;
+let i=1;
+
+while(i<nums.length){
+    for(let j=i-1;j>=0;j--){
+        if(nums[j]<nums[i]){
+         diff=nums[i]-nums[j]
+           if(diff>max){
+            max=diff;
+           }
+        }
+    }
+    i++;
+}
+
+console.log(max)
