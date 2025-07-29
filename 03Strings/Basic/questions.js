@@ -67,14 +67,23 @@ for(let i=0;i<s.length;i++){
    arr[index]=arr[index]+1
 }
 
-for(let i=0;i<arr.length;i++){
-    if(arr[i]>0){
-        console.log(String.fromCharCode(i) + " appears " +arr[i] + " times") 
+// for(let i=0;i<arr.length;i++){
+//     if(arr[i]>0){
+//         console.log(String.fromCharCode(i) + " appears " +arr[i] + " times") 
+//     }
+// }
+
+//TODO:In order print
+
+for(let i=0;i<s.length;i++){
+    let index=s.charCodeAt(i)
+    if(arr[index]>0){
+        console.log(s[i] +" appears" + arr[index] +" times")
+        arr[index]=0
     }
 }
 
 
-//TODO:In order print
 
 
 
