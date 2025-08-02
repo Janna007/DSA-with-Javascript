@@ -57,4 +57,3 @@ console.log(s.charCodeAt(2))  //return ASCII code
 
 
 
-
