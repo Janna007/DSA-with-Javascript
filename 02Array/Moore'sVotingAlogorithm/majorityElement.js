@@ -13,7 +13,7 @@
 // Output: 3
 // Example 2:
 
-// Input: nums = [2,2,1,1,1,2,2]
+// Input: nums = [1,2,1,2,2,2,1]
 // Output: 2
 
 let nums=[6,5,5]

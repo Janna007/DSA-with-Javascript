@@ -115,7 +115,7 @@ console.log(ar)
 
 //0001111 Array
 
-let numArray=[1,0,1,1,1,0,0,1,0,0]
+let numArray=[1,0,1,1,1,0,0,1,0,0]  //[]
 
 let a=0;
 let b=0;
