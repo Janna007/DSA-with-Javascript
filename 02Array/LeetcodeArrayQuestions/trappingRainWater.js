@@ -46,9 +46,9 @@ console.log(totalWater)
 
 // BRUTFORCE APROACH
 let sum=0;
-for(let i=0;i<height.length;i++){
-    let leftLarge=0;
-    let rightLarge=0;
+for(let i=0;i<height.length;i++){  //0
+    let leftLarge=0; //1
+    let rightLarge=0;  //3
     for(let j=i-1;j>=0;j--){
         if(height[j]>leftLarge){
             leftLarge=height[j]

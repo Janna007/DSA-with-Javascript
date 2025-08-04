@@ -25,23 +25,25 @@
 // Output: 0
 // Explanation: There is no way to make a positive profit, so we never buy the stock to achieve the maximum profit of 0.
 
-let prices = [6,1,3,2,4,7]  //7
+let prices = [2,1,2,1,0,0,1] //2 
 var maxProfit = function(prices) {
-     let maxProfit=0  
-     let profit=0;  
+     let maxProfit=0  //1
+     let profit=0;   
      let i=0;
      let j=1;
 
      while(j<prices.length){
         if(prices[j]-prices[i]<=0){
             i=j
+            maxProfit+=profit
+            profit=0
         }
         if(prices[j]-prices[i]>0){
-          let diff=prices[j]-prices[i]
-          if(diff>profit){
+          let diff=prices[j]-prices[i] //1
+          if(diff>profit){   
             profit=diff
               if(j===prices.length-1){
-                maxProfit=profit
+                maxProfit+=profit
               }   
           }else{
             i=j;
