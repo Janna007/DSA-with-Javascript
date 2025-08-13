@@ -1,30 +1,58 @@
+//stack memory/call stack /return keyword
+
+//RECURSION
+//--------------------------------------
+// if you want to perform something repeatedly there are two ways one is iterative way(loop) and recursive way (recursion)
+
+//EX:sum of n natural number one way to do it using for loop other using recursion
 
 // Recursion is a programming technique where a function calls itself directly or indirectly in order to solve a problem. A recursive function typically solves a small part of the problem and then delegates the rest of the problem to a smaller instance of the same function. This process repeats until a base condition is met, which stops the recursion.
 
+//1.Print n times Hello World
 
-
-
-
-function jan(){
-    return san()
+function print(n){
+   if(n===0) return
+   console.log("Hello world")
+   print(n-1)
 }
 
-function san(){
-    return sin()
+print(2)
+
+//2.print n numbers from n to 1
+
+function printNum(n){
+  if (n===0) return
+  console.log(n)
+  printNum(n-1)
 }
 
-function sin(){
-    return app()
+printNum(5)
+
+//from 1 to n
+
+function printNum2(n){
+  if (n===0) return
+   printNum2(n-1)
+  console.log(n)
 }
 
-function app(){    
-    return true   //base case ,it is responsible for solving the recursion
+printNum2(5)
+
+//in the above clg function will execute when the function pop out from the call stack after exectuion(Backtracking)
+
+//3. sum of n numbers
+let sum=0;
+
+function addNum(n){
+  if(n===0) return
+  sum+=n
+  addNum(n-1)
 }
 
+addNum(5)
+console.log(sum)
 
-// console.log(jan())
-
-
+//------------------------------------------------------------------------------------------------------
 //The process in which a function calls itself directly or indirectly is called recursion and the corresponding function is called a recursive function.
 
 // Base Case: The condition under which the recursion stops. Without a base case, the function would call itself indefinitely, leading to a stack overflow error.
