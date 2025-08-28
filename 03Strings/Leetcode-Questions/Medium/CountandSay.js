@@ -24,3 +24,47 @@
 // Explanation:
 
 // This is the base case.
+
+
+function findFrq(s){
+    let arr=[]
+    let count=1;
+    for(let i=0;i<s.length;i++){
+       if(s[i]===s[i-1] && i>0){
+        count++
+        if(i===s.length-1){
+            arr.push([count,Number(s[i])])
+        }
+       }else if(s[i]!==s[i-1] && i>0){
+        arr.push([count,Number(s[i-1])])
+        count=1
+        if(i===s.length-1){
+            arr.push([count,Number(s[i])])
+        }
+        }
+        else if(i===s.length-1){
+            arr.push([count,Number(s[i])])
+        }
+    }
+    return arr
+}
+
+function findStr(arr){
+  let str=""
+  for(let i=0;i<arr.length;i++){
+    str+=arr[i].join("")
+  }
+  return str
+}
+
+var countAndSay = function(n) {
+    if(n===1) return "1" 
+    return findStr(findFrq(countAndSay(n-1)))
+};
+
+console.log(countAndSay(4))
+
+
+
+// console.log(findFrq("1211"))
+// console.log(findStr([[1,1],[1,2],[2,1]]))
